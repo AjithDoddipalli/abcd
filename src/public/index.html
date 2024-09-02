@@ -3,47 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dynamic Website</title>
+    <title>Technovate IT Consulting</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f0f2f5;
+            color: #333;
         }
-
-        h1 {
-            color: blue;
+        .navbar {
+            margin-bottom: 0;
+            background-color: #007bff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        .container {
-            margin-top: 50px;
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: white !important;
+            font-weight: bold;
         }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #f1f1f1;
+        .nav-link {
+            font-size: 1.1rem;
+            color: white !important;
+        }
+        .hero-section {
+            background-image: url('https://example.com/your-image.jpg'); /* Add a relevant background image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
             text-align: center;
-            padding: 10px 0;
+            color: white;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+        .about-section, .services-section, .testimonials-section, .contact-section {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+        .about-section h1, .services-section h1, .testimonials-section h1, .contact-section h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .about-section p, .services-section p, .testimonials-section p, .contact-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .services-section .card, .testimonials-section .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .services-section .card img, .testimonials-section .card img {
+            border-radius: 10px 10px 0 0;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Welcome to My Dynamic Website</h1>
-        <p>This is the homepage served by Node.js and Express.</p>
-        <form action="/submit" method="POST">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/">Technovate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/service">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1>Welcome to Technovate</h1>
+        <p>Your partner in digital transformation. Discover our services and let's innovate together.</p>
+        <a href="/service" class="btn btn-primary">Our Services</a>
+    </div>
+
+    <div class="about-section">
+        <h1>About Technovate</h1>
+        <p>At Technovate, we specialize in providing cutting-edge IT consulting services that help businesses stay ahead in today's competitive landscape. Our team of experienced professionals is dedicated to delivering customized solutions tailored to your unique needs.</p>
+    </div>
+
+    <div class="services-section">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 1</h5>
+                        <p class="card-text">Description of the service offered, highlighting its benefits and value.</p>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 2</h5>
+                        <p class="card-text">Description of the service offered, highlighting its benefits and value.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 3</h5>
+                        <p class="card-text">Description of the service offered, highlighting its benefits and value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-section">
+        <h1>Client Testimonials</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Technovate provided exceptional service and support. Their expertise was crucial to our project's success." - Client Name</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Our experience with Technovate was outstanding. They delivered on time and exceeded our expectations." - Client Name</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h1>Get in Touch</h1>
+        <p>If you're interested in working with us or have any questions, feel free to reach out. We're here to help you with all your IT consulting needs.</p>
+        <a href="/contact" class="btn btn-primary">Contact Us</a>
     </div>
 
     <div class="footer">
-        <p>My Dynamic Website © 2024</p>
+        <p>Technovate IT Consulting © 2024</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -51,4 +191,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
